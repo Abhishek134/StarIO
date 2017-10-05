@@ -1,26 +1,19 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is a starter template for Ionic Star printer 
 
 ## How to use this template
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Notice in the config.xml the plugins section.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+    `<plugin name="star-printer-plugin" spec="https://github.com/InteractiveObject/StarIOPlugin.git" />`
 
-### With the Ionic CLI:
+The cordova commands below will each download and install this plugin. 
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+`cordova prepare ios`  //This sets up the ios environment
+`cordova platform add ios` //This calls cordova prepare 
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+To reset or reinstall the plugin run:
+`cordova platform rm ios` //This removes the platform, however does not remove the plugin that is downloaded.
+`cordova state reset`  //This removes the platform and removes the plugin
 
-Then, to run it, cd into `myBlank` and run:
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
 
