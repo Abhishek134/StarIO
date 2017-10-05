@@ -1,10 +1,35 @@
 This is a starter template for Ionic Star printer 
 
-## How to use this template
+Clone repository
+`git clone xxxxx`
 
-Notice in the config.xml the plugins section.
+Install npms
+`npm install`
 
-    `<plugin name="star-printer-plugin" spec="https://github.com/InteractiveObject/StarIOPlugin.git" />`
+Add platform
+`ionic cordova platform add ios` 
+
+Build
+`ionic build ios`
+
+Notice in the package.json the plugins section.
+
+`"cordova-stario-plugin": "git+https://github.com/InteractiveObject/StarIOPlugin.git",`
+
+`"cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-stario-plugin": {}
+        },
+        "platforms": [
+            "ios"
+        ]
+    }`
 
 The cordova commands below will each download and install this plugin. 
 
@@ -13,7 +38,7 @@ The cordova commands below will each download and install this plugin.
 
 To reset or reinstall the plugin run:
 `cordova platform rm ios` //This removes the platform, however does not remove the plugin that is downloaded.
-`cordova state reset`  //This removes the platform and removes the plugin
+`ionic state reset`  //This removes the platform and removes the plugin
 
 
 
