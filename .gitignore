@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+# ionic and cordova generated files/directories
+plugins
+www
+platforms
+.vscode
+*.d.ts
+*.map
+*.js
