@@ -1,26 +1,44 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is a starter template for Ionic Star printer 
 
-## How to use this template
+Clone repository
+`git clone xxxxx`
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Install npms
+`npm install`
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Add platform
+`ionic cordova platform add ios` 
 
-### With the Ionic CLI:
+Build
+`ionic build ios`
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Notice in the package.json the plugins section.
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+`"cordova-stario-plugin": "git+https://github.com/InteractiveObject/StarIOPlugin.git",`
 
-Then, to run it, cd into `myBlank` and run:
+`"cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-stario-plugin": {}
+        },
+        "platforms": [
+            "ios"
+        ]
+    }`
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+The cordova commands below will each download and install this plugin. 
 
-Substitute ios for android if not on a Mac.
+`cordova prepare ios`  //This sets up the ios environment
+`cordova platform add ios` //This calls cordova prepare 
+
+To reset or reinstall the plugin run:
+`cordova platform rm ios` //This removes the platform, however does not remove the plugin that is downloaded.
+`ionic state reset`  //This removes the platform and removes the plugin
+
+
 
