@@ -1,5 +1,5 @@
 This is a starter template for Ionic Star printer 
-
+its is added
 Clone repository
 `git clone xxxxx`
 
